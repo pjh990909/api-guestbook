@@ -26,6 +26,7 @@ public class GuestbookController {
 		System.out.println("GuestbookController.remove()");
 		
 		guestbookVo.setNo(no);
+		
 		System.out.println(guestbookVo);
 		
 		int count = guestbookService.exeRemove(guestbookVo);
@@ -38,6 +39,7 @@ public class GuestbookController {
 	@PostMapping(value="/api/guests")
 	public GuestbookVo add(@RequestBody GuestbookVo guestbookVo) {
 		System.out.println("GuestbookController.add()");
+		
 		System.out.println(guestbookVo);
 		
 		GuestbookVo guestVo = guestbookService.exeAddandGuest(guestbookVo);
